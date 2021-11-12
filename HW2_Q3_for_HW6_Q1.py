@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# ## HW2_Q3
+# ## HW4
 # 
 # __Note:__ in this question, cohorts 1 to 4 belong to the years 2011-2012, 2013-2014, 2015-2016 and 2017-2018, respectively.
 
@@ -16,10 +16,10 @@ from collections import defaultdict
 # In[2]:
 
 
-cols = ['SEQN','RIDAGEYR','RIDRETH3','DMDEDUC2','DMDMARTL',
+cols = ['SEQN','RIAGENDR','RIDAGEYR','RIDRETH3','DMDEDUC2','DMDMARTL',
         'RIDSTATR', 'SDMVPSU', 'SDMVSTRA', 'WTMEC2YR', 'WTINT2YR']
 
-col_names=['unique ids','age','race and ethnicity','education','marital status',
+col_names=['unique ids','gender','age','race and ethnicity','education','marital status',
            'exam_status','masked variance pseudo', 'masked variance pseudo-stratum',
            '2 year MEC exam weight','2 year interview weight']
 
@@ -34,7 +34,7 @@ for i in range(1,5):
     df=df.convert_dtypes()
     demo_df = demo_df.append(df).reset_index(drop=True)
 
-demo_df.to_pickle(r"DEMO_HW2.pkl")
+demo_df.to_pickle(r"DEMO_HW4.pkl")
 
 
 # In[3]:
@@ -69,5 +69,5 @@ for i in range(1,5):
     df=df.convert_dtypes()
     oral_df = oral_df.append(df).reset_index(drop=True)
 
-oral_df.to_pickle(r"ORAL_HW2.pkl")
+oral_df.to_pickle(r"ORAL_HW4.pkl")
 
